@@ -1,5 +1,6 @@
 package com.example.tienda.Controller;
 
+import com.example.tienda.DTO.ProductoDTO;
 import com.example.tienda.Model.Producto;
 import com.example.tienda.Service.interfaces.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,11 @@ public class ProductoController {
     @DeleteMapping("delete-product/{id}")
     public Boolean deleteProduct(@PathVariable("id") Long id){
         return this.iProductoService.deleteProducto(id);
+    }
+
+    @PostMapping("add-product")
+    public String addProducto(@RequestBody ProductoDTO producto){
+        this.iProductoService.addProducto((producto));
+        return "se ha realizado el post";
     }
 }

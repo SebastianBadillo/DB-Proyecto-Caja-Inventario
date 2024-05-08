@@ -19,6 +19,10 @@ public class InventarioService implements IInventarioService {
         inventario.setId(inventarioDto.getId());
         inventario.setIdProducto(inventarioDto.getIdProducto());
         inventario.setCantidad(inventarioDto.getCantidad());
+        inventario.setLote(inventarioDto.getLote());
+        inventario.setFechaIn(inventarioDto.getFechaIn());
+        inventario.setFechaVen(inventarioDto.getFechaVen());
+
         return this.iInventarioRepository.save(inventario);
     }
 
@@ -37,6 +41,12 @@ public class InventarioService implements IInventarioService {
     public List<Inventario> getAllInventario() {
         return this.iInventarioRepository.findAll();
     }
+
+    @Override
+    public void updateInventory(Long Cantidad, Long id) {
+        this.iInventarioRepository.updateInventory(Cantidad, id);
+    }
+
 
     @Autowired
     public void setiInventarioRepository(IInventarioRepository iInventarioRepository){

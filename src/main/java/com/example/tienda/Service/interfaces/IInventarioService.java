@@ -15,5 +15,5 @@ public interface IInventarioService {
     Inventario getInventario(Long Id);
     List<Inventario> getAllInventario();
 
-
+    void updateInventory(Long Cantidad, Long id);
 }

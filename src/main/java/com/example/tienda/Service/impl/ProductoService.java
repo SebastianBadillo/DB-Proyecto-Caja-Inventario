@@ -19,8 +19,6 @@ public class ProductoService implements IProductoService {
         producto.setNombre(productoDto.getNombre());
         producto.setEmpresa(productoDto.getEmpresa());
         producto.setCodigo(productoDto.getCodigo());
-        producto.setFechaIn(productoDto.getFechaIn());
-        producto.setFechaVen(productoDto.getFechaVen());
         producto.setDescripcion(productoDto.getDescripcion());
         producto.setPrecio(productoDto.getPrecio());
         return this.iProductoRepository.save(producto);
@@ -47,6 +45,8 @@ public class ProductoService implements IProductoService {
         String nombreNormalizado = nombre.trim().toLowerCase();
         return this.iProductoRepository.findByNombreContainingIgnoreCase(nombreNormalizado);
     }
+
+
 
     @Autowired
     public void setiProductoRepository(IProductoRepository iproductoRepository) {

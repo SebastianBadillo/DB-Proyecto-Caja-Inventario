@@ -18,8 +18,6 @@ public class ProductoDTO implements Serializable {
     private String nombre;
     private String empresa;
     private Long codigo;
-    private Date fechaVen;
-    private  Date fechaIn;
     private String descripcion;
     private Long precio;
 

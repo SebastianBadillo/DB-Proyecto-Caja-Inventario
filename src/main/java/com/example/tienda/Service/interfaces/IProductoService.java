@@ -16,6 +16,8 @@ public interface IProductoService {
 
     List<Producto> getAllProductos();
     List<Producto> findByNombreContainingIgnoreCase(String nombre);
+
+
 }
 
 

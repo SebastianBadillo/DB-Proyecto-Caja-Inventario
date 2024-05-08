@@ -31,17 +31,13 @@ public class Producto implements Serializable {
     @Column(name = "CODIGO")
     private Long codigo;
 
-    @Column(name = "FECHAVEN")
-    private Date fechaVen;
-
-    @Column(name="FECHAIN")
-    private  Date fechaIn;
-
     @Column(name = "DESCRIPCION")
     private String descripcion;
 
     @Column(name = "PRECIO")
     private Long precio;
+
+
 
     @Override
     public String toString() {
@@ -50,8 +46,7 @@ public class Producto implements Serializable {
                 ", nombre='" + nombre + '\'' +
                 ", empresa='" + empresa + '\'' +
                 ", codigo=" + codigo +
-                ", fechaVen=" + fechaVen +
-                ", fechaIn=" + fechaIn +
+
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 '}';
